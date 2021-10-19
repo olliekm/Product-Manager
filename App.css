@@ -1,0 +1,442 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(197, 197, 197);
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #ee52ee, #8d8d8d, #61d5ff, #d5237c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.addBtn {
+  background-color: black;
+  border: none;
+  padding: 3em 7em;
+  color: aliceblue;
+  position: relative;
+  font-size: 0.8rem;
+  display: inline;
+  height: 100%;
+  z-index: 10;
+  transition: 0.1s;
+}
+
+.addBtn:hover {
+  background-color: rgb(17, 17, 17);
+  letter-spacing: 5px;
+}
+
+
+
+.productList {
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 2%;
+  height: 80vh;
+  padding: 40px;
+  padding-top: 50px;
+  list-style-type: none;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  transition: 0.5s;
+  background: rgba(175, 175, 175, 0.664);
+  box-shadow: 0 8px 32px 0 rgba(31, 32, 53, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.productList::-webkit-scrollbar {
+  width: 1em;
+}
+
+/* Track */
+.productList::-webkit-scrollbar-track {
+  background: #f1f1f152;
+}
+
+/* Handle */
+.productList::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 4px solid #f1f1f1;
+  ;
+}
+
+
+.productList li {
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  background-color: rgb(214, 214, 214);
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  -webkit-box-shadow: 0px 5px 15px -4px #00000050;
+  box-shadow: 0px 5px 15px -4px #00000069;
+  transition: 0.2s ease-in;
+
+}
+
+.productList li:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.383);
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.top {
+  background-color: white;
+  height: fit-content;
+}
+
+.inputs {
+  position: absolute;
+  top: 0;
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-right: 50px;
+  padding: 0.7em 0.5em;
+  color: rgb(116, 116, 116);
+  transition: 0.2s;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.inputs input:focus {
+  outline: none;
+  background-color: rgba(168, 168, 168, 0.212);
+  color: rgb(0, 0, 0);
+}
+
+.inputs label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  margin-right: 20px;
+  letter-spacing: 2px;
+}
+
+.deleteBtn {
+  text-decoration: none;
+  color: red;
+  background-color: white;
+  padding: 10px 30px;
+  transition: 0.15s;
+  font-size: 15px;
+  outline: white solid 2px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.editBtn {
+  color: rgb(0, 0, 255);
+  background-color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: 0.15s;
+  font-size: 15px;
+  outline: white solid 2px;
+  margin-right: 30px;
+  border-radius: 2px;
+}
+
+.editBtn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(31, 72, 255);
+}
+
+.deleteBtn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 23, 81);
+}
+
+.loginCont {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  height: 100vh;
+  width: 100%;
+  z-index: 500;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInputs {
+  background-color: rgba(255, 255, 255, 0.267);
+  backdrop-filter: blur(50%);
+  border-radius: 10px;
+  width: 300px;
+  height: max-content;
+  padding: 30px;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 5px 15px -4px #0000007a;
+  box-shadow: 0px 20px 45px -4px #0000005b;
+}
+
+.loginInputs h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 10%;
+}
+
+.loginInputs input {
+  margin-bottom: 30px;
+  width: 90%;
+  display: block;
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.1s;
+  outline-offset: 2px;
+}
+
+.loginInputs input:hover {
+  outline: 1px solid rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 15px 35px -8px #00000071;
+  box-shadow: 0px 15px 35px -8px #00000081;
+}
+
+.loginInputs input:focus {
+  background-color: rgba(255, 255, 255, 0.507);
+}
+
+.loginInputs button {
+  width: 100%;
+  font-size: 1.7rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  border-radius: 10px;
+  border: none;
+  transition: 0.15s;
+}
+
+.loginInputs button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.329);
+  outline: 2px solid white;
+  letter-spacing: 2px;
+  transform: translateY(-5px) scale(5px);
+  -webkit-box-shadow: 0px 15px 35px -8px #00000071;
+  box-shadow: 0px 15px 35px -8px #00000081;
+}
+
+.logoutBtn {
+  background-color: black;
+  border: none;
+  padding: 3em 7em;
+  color: aliceblue;
+  position: relative;
+  font-size: 0.8rem;
+  display: inline;
+  height: 100%;
+  z-index: 10;
+  transition: 0.1s;
+
+}
+
+.logoutBtn:hover {
+  background-color: rgb(17, 17, 17);
+  letter-spacing: 5px;
+}
+
+.productID {
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-top: 10px;
+  transition: 0.1s;
+}
+
+.productID:hover {
+  color: #00a2ff;
+  font-weight: bold;
+}
+
+.editCont {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(126, 126, 126, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  width: 20em;
+  height: 30em;
+  margin: 3em;
+  padding: 1em;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.editCont h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  display: block;
+  font-size: 4rem;
+  transition: 0.5s;
+}
+
+.editinputs {
+  width: 100%;
+
+}
+
+
+
+.editinputs input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-right: 50px;
+  padding: 0.7em 0.5em;
+  color: rgb(116, 116, 116);
+  background-color: #4159d000;
+  transition: 0.2s;
+  border: 0;
+  width: 90%;
+  border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.editinputs input:focus {
+  outline: none;
+  background-color: rgba(168, 168, 168, 0.212);
+  color: aliceblue;
+}
+
+.editinputs label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.productquantity {
+  max-height: 30px;
+  max-width: 40px;
+  position: relative;
+  margin-left: 1%;
+  border: none;
+  background-color: #c2c2c2;
+  border-radius: 3px;
+}
+
+.clearBtn {
+  border-radius: 0.5em;
+  border: none;
+  padding: 1em 2em;
+  margin-top: 10%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.productImgCont {
+  max-width: 20%;
+  max-height: 30%;
+  width: 500px;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(126, 126, 126, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  position: fixed;
+  margin: 1.5%;
+  bottom: 0;
+  padding: 1em;
+  overflow: hidden;
+  display: flex;
+  border: 2px solid rgb(233, 233, 233);
+}
+
+.productImg {
+  background-image: url('https://campfireaudio.com/wp-content/uploads/2020/04/Andromeda-2020-01-Webpage-Image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.productImgCont h1 {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  text-align: center;
+  background-color: #ffffff67;
+  padding: 10px;
+  border-radius: 0.3em;
+
+}
+
+@media only screen and (max-width: 1700px) {
+  .productList {
+    float: right;
+  }
+
+  .inputs {
+    justify-content: right;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .productList li {
+    font-size: 1.2rem;
+  }
+
+  .editCont h1 {
+    font-size: 2rem;
+  }
+
+  .editCont {
+    width: 15%;
+    height: 25em;
+  }
+
+  .inputs input {
+    font-size: 0.8rem;
+
+  }
+
+  .inputs label {
+    font-size: 0.8rem;
+
+  }
+}
